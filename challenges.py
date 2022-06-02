@@ -9,7 +9,9 @@ def capital_indexes(string_in):
     for idx, letter in enumerate(string_in):
         if letter.isupper():
             capitals.append(idx)
+    return capitals
 
+print(capital_indexes("heLIo"))
 
 ############################################
 
