@@ -9,11 +9,8 @@ import challenges as ch
 
 # For example, calling capital_indexes("HeLlO") should return the list [0, 2, 4].
 
-def capital_indexes(string_in):
-    capitals = []
-    for idx, letter in enumerate(string_in):
-        if letter.isupper():
-            capitals.append(idx)
-    return capitals
+def test_capital_indexes():
+    capitals = ch.capital_indexes("heLLo")
+    assert capitals == [2,3]
 
-print(capital_indexes("heLIo"))
+############################################
