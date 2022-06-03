@@ -1,6 +1,8 @@
-############################################
+# https://pythonprinciples.com/challenges/
 
+########################################################
 #### Capital Indexes (2/10) ####
+# https://pythonprinciples.com/challenges/Capital-indexes/
 
 # Write a function named capital_indexes. The function takes a single parameter, which is a string. Your function should return a list of all the indexes in the string that have capital letters.
 
@@ -15,9 +17,9 @@ def capital_indexes(string_in):
 
 print(capital_indexes("heLIo"))
 
-############################################
-
+########################################################
 #### Middle Letter (2/10) ####
+# https://pythonprinciples.com/challenges/Middle-letter/
 
 # Write a function named mid that takes a string as its parameter. Your function should extract and return the middle letter. If there is no middle letter, your function should return the empty string.
 
@@ -32,9 +34,10 @@ def mid(string_in):
 
 print(mid("world"))
 
-############################################
+########################################################
+#### Online Status (2/10) ####
+# https://pythonprinciples.com/challenges/Online-status/
 
-#### Online status (2/10) ####
 # The aim of this challenge is, given a dictionary of people's online status, to count the number of people who are online.
 
 # For example, consider the following dictionary:
