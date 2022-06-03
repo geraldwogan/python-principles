@@ -53,3 +53,20 @@ statuses = {
 def test_online_count():
     count = ch.online_count(statuses)
     assert count == 2
+
+########################################################
+#### Randomness (2/10) ####
+# https://pythonprinciples.com/challenges/Randomness/
+
+# Define a function, random_number, that takes no parameters. The function must generate a random integer between 1 and 100, both inclusive, and return it.
+
+# Calling the function multiple times should (usually) return different numbers.
+
+# For example, calling random_number() some times might first return 42, then 63, then 1.
+
+def test_random_number():
+    randoms = []
+    for i in range(0,100):
+        randoms.append(ch.random_number())
+    res = all(num >= 0 and num <= 100 for num in randoms)
+    assert res == True
