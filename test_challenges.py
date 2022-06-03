@@ -21,6 +21,10 @@ def test_capital_indexes():
 
 # For example, mid("abc") should return "b" and mid("aaaa") should return "".
 
-def test_mid(string_in):
-    letter = ch.mid("world")
-    assert letter == 'l'
+def test_mid0():
+    letter = ch.mid("abc")
+    assert letter == 'b'
+
+def test_mid1():
+    letter = ch.mid("abcd")
+    assert letter == ''
