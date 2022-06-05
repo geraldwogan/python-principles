@@ -27,7 +27,7 @@ def test_mid_odd():
     letter = ch.mid("abc")
     assert letter == 'b'
 
-def test_mid1():
+def test_mid_even():
     letter = ch.mid("abcd")
     assert letter == ''
 
