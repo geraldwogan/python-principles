@@ -70,3 +70,21 @@ def test_random_number():
         randoms.append(ch.random_number())
     res = all(num >= 0 and num <= 100 for num in randoms)
     assert res == True
+
+########################################################
+#### Type Check (2/10) ####
+# https://pythonprinciples.com/challenges/Type-check/
+
+# Write a function named only_ints that takes two parameters. Your function should return True if both parameters are integers, and False otherwise.
+
+# For example, calling only_ints(1, 2) should return True, while calling only_ints("a", 1) should return False.
+
+def test_only_ints():
+    is_only_ints = ch.only_ints(1,2)
+    assert is_only_ints == True
+    is_only_ints = ch.only_ints(1,'2')
+    assert is_only_ints == False
+    is_only_ints = ch.only_ints('1',2)
+    assert is_only_ints == False
+
+    
