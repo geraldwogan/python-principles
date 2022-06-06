@@ -113,9 +113,8 @@ print(only_ints(1,'r'))
 
 def double_letters(string_in):
     for i, letter in enumerate(string_in):
-        print(string_in[i-1], ' : ', string_in[i])
-        if string_in[i-1] is string_in[i]:
+        if string_in[i-1] is letter:
             return True
-        return False
+    return False
 
 double_letters('hello')
