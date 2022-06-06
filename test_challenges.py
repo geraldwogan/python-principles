@@ -87,4 +87,19 @@ def test_only_ints():
     is_only_ints = ch.only_ints('1',2)
     assert is_only_ints == False
 
-    
+########################################################
+#### Double Letters (3/10) ####
+# https://pythonprinciples.com/challenges/Double-letters/
+
+# The goal of this challenge is to analyze a string to check if it contains two of the same letter in a row. For example, the string "hello" has l twice in a row, while the string "nono" does not have two identical letters in a row.
+
+# Define a function named double_letters that takes a single parameter. The parameter is a string. Your function must return True if there are two identical letters in a row in the string, and False otherwise.
+
+def test_double_letters():
+    assert ch.double_letters('a') == False
+    assert ch.double_letters('aba') == False
+    assert ch.double_letters('bab') == False
+
+    assert ch.double_letters('aa') == True
+    assert ch.double_letters('abba') == True
+    assert ch.double_letters('aabb') == True
