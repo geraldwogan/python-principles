@@ -100,11 +100,8 @@ def only_ints(in_1, in_2):
 
 print(only_ints(1,'r'))
 
-
-
-
 ########################################################
-#### Double letters (3/10) ####
+#### Double Letters (3/10) ####
 # https://pythonprinciples.com/challenges/Double-letters/
 
 # The goal of this challenge is to analyze a string to check if it contains two of the same letter in a row. For example, the string "hello" has l twice in a row, while the string "nono" does not have two identical letters in a row.
@@ -113,8 +110,9 @@ print(only_ints(1,'r'))
 
 def double_letters(string_in):
     for i, letter in enumerate(string_in):
-        if string_in[i-1] is letter:
-            return True
+        if i != 0: # Prevent 'IndexError: string index out of range'
+            if string_in[i-1] is letter:
+                return True
     return False
 
-double_letters('hello')
+print(double_letters('hello'))
