@@ -116,3 +116,30 @@ def double_letters(string_in):
     return False
 
 print(double_letters('hello'))
+
+########################################################
+#### Adding and Removing Dots (3/10) ####
+# https://pythonprinciples.com/challenges/Adding-and-removing-dots/
+
+# Write a function named add_dots that takes a string and adds "." in between each letter. For example, calling add_dots("test") should return the string "t.e.s.t".
+
+# Then, below the add_dots function, write another function named remove_dots that removes all dots from a string. For example, calling remove_dots("t.e.s.t") should return "test".
+
+# If both functions are correct, calling remove_dots(add_dots(string)) should return back the original string for any string.
+
+# (You may assume that the input to add_dots does not itself contain any dots.)
+
+def add_dots(string_in):
+    dotted_string = ''
+    for i, letter in enumerate(string_in):
+        dotted_string += letter + '.'
+    return dotted_string[:-1]
+
+print(add_dots('test'))
+
+def remove_dots(string_in):
+    return string_in.replace('.','')
+
+print(remove_dots('t.e.s.t'))
+
+print(remove_dots(add_dots('test')))
