@@ -130,10 +130,7 @@ print(double_letters('hello'))
 # (You may assume that the input to add_dots does not itself contain any dots.)
 
 def add_dots(string_in):
-    dotted_string = ''
-    for i, letter in enumerate(string_in):
-        dotted_string += letter + '.'
-    return dotted_string[:-1]
+    return ".".join(string_in)
 
 print(add_dots('test'))
 
