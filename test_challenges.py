@@ -103,3 +103,23 @@ def test_double_letters():
     assert ch.double_letters('aa') == True
     assert ch.double_letters('abba') == True
     assert ch.double_letters('aabb') == True
+
+########################################################
+#### Adding and Removing Dots (3/10) ####
+# https://pythonprinciples.com/challenges/Adding-and-removing-dots/
+
+# Write a function named add_dots that takes a string and adds "." in between each letter. For example, calling add_dots("test") should return the string "t.e.s.t".
+
+# Then, below the add_dots function, write another function named remove_dots that removes all dots from a string. For example, calling remove_dots("t.e.s.t") should return "test".
+
+# If both functions are correct, calling remove_dots(add_dots(string)) should return back the original string for any string.
+
+# (You may assume that the input to add_dots does not itself contain any dots.)
+
+def test_add_dots():
+    assert ch.add_dots('a') == 'a'
+    assert ch.add_dots('test') == 't.e.s.t'
+
+def test_remove_dots():
+    assert ch.remove_dots('a') == 'a'
+    assert ch.remove_dots('t.e.s.t') == 'test'
