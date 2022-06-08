@@ -123,3 +123,24 @@ def test_add_dots():
 def test_remove_dots():
     assert ch.remove_dots('a') == 'a'
     assert ch.remove_dots('t.e.s.t') == 'test'
+
+########################################################
+#### Counting Syllables (3/10) ####
+# https://pythonprinciples.com/challenges/Counting-syllables/
+
+# Define a function named count that takes a single parameter. The parameter is a string. The string will contain a single word divided into syllables by hyphens, such as these:
+
+# "ho-tel"
+# "cat"
+# "met-a-phor"
+# "ter-min-a-tor"
+
+# Your function should count the number of syllables and return it.
+
+# For example, the call count("ho-tel") should return 2.
+
+def test_count():
+    assert ch.count('cat') == 1
+    assert ch.count('ho-tel') == 2
+    assert ch.count('met-a-phor') == 3
+    assert ch.count('ter-min-a-tor') == 4
