@@ -253,8 +253,7 @@ print(div_3(6))
 # For example, calling get_row_col("A3") should return the tuple (2, 0) because A3 corresponds to the row at index 2 and column at index 0in the board.
 
 def get_row_col(string_in):
-    mappings = {'A':0,'B':1,'C':2}
-    return (int(string_in[-1])-1, mappings[string_in[0]] )
+    return (int(string_in[-1])-1, int(chr(ord(string_in[0])-17)) )
     
 print(get_row_col("A2"))
 print(get_row_col("B3"))
