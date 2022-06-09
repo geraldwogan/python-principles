@@ -258,3 +258,23 @@ def get_row_col(string_in):
 print(get_row_col("A2"))
 print(get_row_col("B3"))
 print(get_row_col("C1"))
+
+########################################################
+#### Palindrome (4/10) ####
+# https://pythonprinciples.com/challenges/Palindrome/
+
+# A string is a palindrome when it is the same when read backwards.
+
+# For example, the string "bob" is a palindrome. So is "abba". But the string "abcd" is not a palindrome, because "abcd" != "dcba".
+
+# Write a function named palindrome that takes a single string as its parameter. Your function should return True if the string is a palindrome, and False otherwise.
+
+def palindrome(string_in):
+    print(int(len(string_in)/2))
+    str_1 = string_in[:int(len(string_in)/2)]
+    str_2 = string_in[int(len(string_in)/2):]
+    print(str_1, str_2)
+    return sorted(str_1) == sorted(str_2)
+
+print(palindrome('abba'))
+print(palindrome('aba'))
