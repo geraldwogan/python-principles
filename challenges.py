@@ -193,3 +193,20 @@ def flatten(list_in):
     return [item for inner_list in list_in for item in inner_list]
 
 print(flatten([[1, 2], [3, 4]]))
+
+########################################################
+#### Min-maxing (3/10) ####
+# https://pythonprinciples.com/challenges/Minmaxing/
+
+# Define a function named largest_difference that takes a list of numbers as its only parameter.
+
+# Your function should compute and return the difference between the largest and smallest number in the list.
+
+# For example, the call largest_difference([1, 2, 3]) should return 2 because 3 - 1 is 2.
+
+# You may assume that no numbers are smaller or larger than -100 and 100.
+
+def largest_difference(list_in):
+    return max(list_in) - min(list_in)
+
+print(largest_difference([-1, 2, -3]))
