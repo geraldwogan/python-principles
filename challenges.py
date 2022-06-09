@@ -176,3 +176,25 @@ def is_anagram(str_1, str_2):
 
 print(is_anagram("typhoon", "opython"))
 print(is_anagram('test', 'tess'))
+
+########################################################
+#### Flatten a List (3/10) ####
+# https://pythonprinciples.com/challenges/Flatten-a-list/
+
+# Write a function that takes a list of lists and flattens it into a one-dimensional list.
+
+# Name your function flatten. It should take a single parameter and return a list.
+
+# For example, calling: flatten([[1, 2], [3, 4]])
+
+# Should return the list: [1, 2, 3, 4]
+
+def flatten(list_in):
+    list_out = []
+    for item in list_in:
+        for i in item:
+            list_out.append(i)
+        
+    return list_out
+
+print(flatten([[1, 2], [3, 4]]))
