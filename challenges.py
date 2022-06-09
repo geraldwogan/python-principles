@@ -221,3 +221,5 @@ print(largest_difference([-1, 2, -3]))
 
 def div_3(int_in):
     return int_in % 3 == 0 
+
+print(div_3(6))
