@@ -174,3 +174,19 @@ def test_is_anagram():
 
 def test_flatten():
     assert ch.flatten([[1, 2], [3, 4]]) == [1,2,3,4]
+
+########################################################
+#### Min-maxing (3/10) ####
+# https://pythonprinciples.com/challenges/Minmaxing/
+
+# Define a function named largest_difference that takes a list of numbers as its only parameter.
+
+# Your function should compute and return the difference between the largest and smallest number in the list.
+
+# For example, the call largest_difference([1, 2, 3]) should return 2 because 3 - 1 is 2.
+
+# You may assume that no numbers are smaller or larger than -100 and 100.
+
+def test_largest_difference():
+    assert ch.largest_difference([1, 2, 3]) == 2
+    assert ch.largest_difference([-1, 2, -3]) == 5
