@@ -160,3 +160,19 @@ def count(string_in):
     return string_in.count('-') + 1
 
 print(count('ho-tel'))
+
+########################################################
+#### Anagrams (3/10) ####
+# https://pythonprinciples.com/challenges/Anagrams/
+
+# Two strings are anagrams if you can make one from the other by rearranging the letters.
+
+# Write a function named is_anagram that takes two strings as its parameters. Your function should return True if the strings are anagrams, and False otherwise.
+
+# For example, the call is_anagram("typhoon", "opython") should return True while the call is_anagram("Alice", "Bob") should return False.
+
+def is_anagram(str_1, str_2):
+    return sorted(str_1) == sorted(str_2)
+
+print(is_anagram("typhoon", "opython"))
+print(is_anagram('test', 'tess'))
