@@ -190,11 +190,7 @@ print(is_anagram('test', 'tess'))
 # Should return the list: [1, 2, 3, 4]
 
 def flatten(list_in):
-    list_out = []
-    for item in list_in:
-        for i in item:
-            list_out.append(i)
-        
-    return list_out
+    return [item for inner_list in list_in for item in inner_list]
+
 
 print(flatten([[1, 2], [3, 4]]))
