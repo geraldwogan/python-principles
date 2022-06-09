@@ -144,3 +144,18 @@ def test_count():
     assert ch.count('ho-tel') == 2
     assert ch.count('met-a-phor') == 3
     assert ch.count('ter-min-a-tor') == 4
+
+########################################################
+#### Anagrams (3/10) ####
+# https://pythonprinciples.com/challenges/Anagrams/
+
+# Two strings are anagrams if you can make one from the other by rearranging the letters.
+
+# Write a function named is_anagram that takes two strings as its parameters. Your function should return True if the strings are anagrams, and False otherwise.
+
+# For example, the call is_anagram("typhoon", "opython") should return True while the call is_anagram("Alice", "Bob") should return False.
+
+def test_is_anagram():
+    assert ch.is_anagram("typhoon", "opython") == True 
+    assert ch.is_anagram("Alice", "Bob") == False
+    assert ch.is_anagram('test', 'tess') == False
