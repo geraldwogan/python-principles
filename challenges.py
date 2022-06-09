@@ -192,5 +192,4 @@ print(is_anagram('test', 'tess'))
 def flatten(list_in):
     return [item for inner_list in list_in for item in inner_list]
 
-
 print(flatten([[1, 2], [3, 4]]))
