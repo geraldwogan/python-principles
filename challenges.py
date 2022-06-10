@@ -77,6 +77,7 @@ print(online_count(statuses))
 
 # For example, calling random_number() some times might first return 42, then 63, then 1.
 
+import enum
 import random
 from re import T
 
@@ -270,11 +271,11 @@ print(get_row_col("C1"))
 # Write a function named palindrome that takes a single string as its parameter. Your function should return True if the string is a palindrome, and False otherwise.
 
 def palindrome(string_in):
-    print(int(len(string_in)/2))
-    str_1 = string_in[:int(len(string_in)/2)]
-    str_2 = string_in[int(len(string_in)/2):]
-    print(str_1, str_2)
-    return sorted(str_1) == sorted(str_2)
+    for i, v in enumerate(string_in):
+        if v != string_in[int(len(string_in)) - i - 1]:
+            return False
+    return True
 
 print(palindrome('abba'))
-print(palindrome('aba'))
+print(palindrome('bob'))
+print(palindrome('abcd'))
