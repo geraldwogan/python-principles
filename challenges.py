@@ -271,10 +271,7 @@ print(get_row_col("C1"))
 # Write a function named palindrome that takes a single string as its parameter. Your function should return True if the string is a palindrome, and False otherwise.
 
 def palindrome(string_in):
-    for i, v in enumerate(string_in):
-        if v != string_in[int(len(string_in)) - i - 1]:
-            return False
-    return True
+    return string_in == string_in[::-1] # reverse the string
 
 print(palindrome('abba'))
 print(palindrome('bob'))
