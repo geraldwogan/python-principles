@@ -238,3 +238,18 @@ def test_get_row_col():
     assert ch.get_row_col('A2') == (1, 0)
     assert ch.get_row_col('B3') == (2, 1)
     assert ch.get_row_col('C1') == (0, 2)
+
+########################################################
+#### Palindrome (4/10) ####
+# https://pythonprinciples.com/challenges/Palindrome/
+
+# A string is a palindrome when it is the same when read backwards.
+
+# For example, the string "bob" is a palindrome. So is "abba". But the string "abcd" is not a palindrome, because "abcd" != "dcba".
+
+# Write a function named palindrome that takes a single string as its parameter. Your function should return True if the string is a palindrome, and False otherwise.
+
+def test_palindrome():
+    assert ch.palindrome('abba') == True
+    assert ch.palindrome('bob') == True
+    assert ch.palindrome('abcd') == False
