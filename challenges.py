@@ -77,6 +77,7 @@ print(online_count(statuses))
 
 # For example, calling random_number() some times might first return 42, then 63, then 1.
 
+from calendar import c
 import enum
 import random
 from re import T
@@ -289,3 +290,30 @@ def up_down(int_in):
     return (int_in-1, int_in+1)
 
 print(up_down(5))
+
+########################################################
+#### Consecutive zeros (4/10) ####
+# https://pythonprinciples.com/challenges/Consecutive-zeros/
+
+# The goal of this challenge is to analyze a binary string consisting of only zeros and ones. Your code should find the biggest number of consecutive zeros in the string. For example, given the string:
+
+# "1001101000110"
+
+# The biggest number of consecutive zeros is 3.
+
+# Define a function named consecutive_zeros that takes a single parameter, which is the string of zeros and ones. Your function should return the number described above.
+
+def consecutive_zeros(string_in):
+    biggest = 0
+    curr_biggest = 0
+    for l in string_in:
+        
+        curr_biggest = curr_biggest + 1 if l == '0' else 0
+
+        if curr_biggest > biggest:
+            biggest = curr_biggest
+
+    return biggest
+
+print(consecutive_zeros("1001101000110"))
+
