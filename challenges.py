@@ -319,3 +319,19 @@ def all_equal(list_in):
 
 print(all_equal([1,1,1]))
 print(all_equal([1,2,1]))
+
+########################################################
+#### Boolean and (4/10) ####
+# https://pythonprinciples.com/challenges/Boolean-and/
+
+# Define a function named triple_and that takes three parameters and returns True only if they are all True and False otherwise.
+
+def triple_and(bool_1, bool_2, bool_3):
+    return all([bool_1, bool_2, bool_3])
+    # this also works:
+    # return bool_1 and bool_2 and bool_3
+
+print(triple_and(True, True, True))
+print(triple_and(True, True, False))
+
+
