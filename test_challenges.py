@@ -306,3 +306,18 @@ def test_triple_and():
     assert ch.triple_and(True, True, True) == True
     assert ch.triple_and(True, False, True) == False
     assert ch.triple_and(1, 1, 1) == True
+
+########################################################
+#### Writing Short Code (5/10) ####
+# https://pythonprinciples.com/challenges/Writing-short-code/
+
+# Define a function named convert that takes a list of numbers as its only parameter and returns a list of each number converted to a string.
+
+# For example, the call convert([1, 2, 3]) should return ["1", "2", "3"].
+
+# What makes this tricky is that your function body must only contain a single line of code.
+
+def test_convert():
+    assert ch.convert([1, 2, 3]) == ['1', '2', '3']
+    assert ch.convert([1]) == ['1']
+    assert ch.convert([]) == []
