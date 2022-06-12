@@ -95,12 +95,10 @@ print(random_number())
 
 # For example, calling only_ints(1, 2) should return True, while calling only_ints("a", 1) should return False.
 
-def only_ints(in_1, in_2):
-    if isinstance(in_1, int) and isinstance(in_2, int) :
-        return True
-    return False
+def only_ints(int_1, int_2):
+    return type(int_1) == int and type(int_2) == int
 
-print(only_ints(1,'r'))
+print(only_ints(1, True))
 
 ########################################################
 #### Double Letters (3/10) ####
