@@ -352,6 +352,7 @@ print(convert([]))
 
 ########################################################
 #### Custom Zip (5/10) ####
+# https://pythonprinciples.com/challenges/Custom-zip/
 
 # The built-in zip function "zips" two lists. Write your own implementation of this function.
 
@@ -373,3 +374,4 @@ def zap(a, b):
     return [(a[i], b[i]) for i in range(len(a))]
 
 print(zap([0, 1, 2, 3], [5, 6, 7, 8]))
+print(zap([], []))
