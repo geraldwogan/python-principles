@@ -304,16 +304,7 @@ print(up_down(5))
 # Define a function named consecutive_zeros that takes a single parameter, which is the string of zeros and ones. Your function should return the number described above.
 
 def consecutive_zeros(string_in):
-    biggest = 0
-    curr_biggest = 0
-    for l in string_in:
-        
-        curr_biggest = curr_biggest + 1 if l == '0' else 0
-
-        if curr_biggest > biggest:
-            biggest = curr_biggest
-
-    return biggest
+    return max([len(s) for s in string_in.split('1')])
 
 print(consecutive_zeros("1001101000110"))
 
