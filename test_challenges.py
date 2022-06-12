@@ -295,3 +295,14 @@ def test_all_equal():
     assert ch.all_equal([1, 2, 3]) == False
     assert ch.all_equal([1]) == True
     assert ch.all_equal([]) == True
+
+########################################################
+#### Boolean and (4/10) ####
+# https://pythonprinciples.com/challenges/Boolean-and/
+
+# Define a function named triple_and that takes three parameters and returns True only if they are all True and False otherwise.
+
+def test_triple_and():
+    assert ch.triple_and(True, True, True) == True
+    assert ch.triple_and(True, False, True) == False
+    assert ch.triple_and(1, 1, 1) == True
