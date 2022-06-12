@@ -80,12 +80,10 @@ def test_random_number():
 # For example, calling only_ints(1, 2) should return True, while calling only_ints("a", 1) should return False.
 
 def test_only_ints():
-    is_only_ints = ch.only_ints(1,2)
-    assert is_only_ints == True
-    is_only_ints = ch.only_ints(1,'2')
-    assert is_only_ints == False
-    is_only_ints = ch.only_ints('1',2)
-    assert is_only_ints == False
+    assert ch.only_ints(1,2) == True
+    assert ch.only_ints(1,'2') == False
+    assert ch.only_ints('1',2) == False
+    assert ch.only_ints(1, True) == False
 
 ########################################################
 #### Double Letters (3/10) ####
