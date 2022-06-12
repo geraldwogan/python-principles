@@ -308,3 +308,16 @@ def consecutive_zeros(string_in):
 
 print(consecutive_zeros("1001101000110"))
 
+########################################################
+#### All Equal (4/10) ####
+# https://pythonprinciples.com/challenges/All-equal/
+
+# Define a function named all_equal that takes a list and checks whether all elements in the list are the same.
+
+# For example, calling all_equal([1, 1, 1]) should return True.
+
+def all_equal(list_in):
+    return len(set(list_in)) <= 1
+
+print(all_equal([1,1,1]))
+print(all_equal([1,2,1]))
