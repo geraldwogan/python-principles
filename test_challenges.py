@@ -283,3 +283,17 @@ def test_consecutive_zeros():
     assert ch.consecutive_zeros("1001101000110") == 3
     assert ch.consecutive_zeros("111") == 0
     assert ch.consecutive_zeros("0") == 1
+
+########################################################
+#### All Equal (4/10) ####
+# https://pythonprinciples.com/challenges/All-equal/
+
+# Define a function named all_equal that takes a list and checks whether all elements in the list are the same.
+
+# For example, calling all_equal([1, 1, 1]) should return True.
+
+def test_all_equal():
+    assert ch.all_equal([1, 1, 1]) == True
+    assert ch.all_equal([1, 2, 3]) == False
+    assert ch.all_equal([1]) == True
+    assert ch.all_equal([]) == True
