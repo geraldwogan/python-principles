@@ -347,3 +347,57 @@ def test_zap():
     assert ch.zap([0], [1]) == [(0, 1)]
     assert ch.zap([], []) == []
 
+########################################################
+#### Solution Validation (5/10) ####
+# https://pythonprinciples.com/challenges/Solution-validation/
+
+# The aim of this challenge is to write code that can analyze code submissions. We'll simplify things a lot to not make this too hard.
+
+# Write a function named validate that takes code represented as a string as its only parameter.
+
+# Your function should check a few things:
+
+#  - the code must contain the def keyword
+#     - otherwise return "missing def"
+#  - the code must contain the : symbol
+#     - otherwise return "missing :"
+#  - the code must contain ( and ) for the parameter list
+#     - otherwise return "missing paren"
+#  - the code must not contain ()
+#     - otherwise return "missing param"
+#  - the code must contain four spaces for indentation
+#     - otherwise return "missing indent"
+#  - the code must contain validate
+#     - otherwise return "wrong name"
+#  - the code must contain a return statement
+#     - otherwise return "missing return"
+
+# If all these conditions are satisfied, your code should return True.
+
+# Here comes the twist: your solution must return True when validating itself.
+
+def test_validate():
+    assert ch.validate('') == 'missing def'
+    assert ch.validate('def foo\n return 123') == 'missing :'
+    assert ch.validate('def foo:\n return 123') == 'missing paren'
+    assert ch.validate('def foo():\n print(123)') == 'missing param'
+    assert ch.validate('def foo(x):\nprint(123)') == 'missing indent'
+    assert ch.validate('def foo(x):\n print(123)') == 'wrong name'
+    assert ch.validate('def validate(x):\n print(123)') == 'missing return'
+    assert ch.validate("""def validate(code_in):
+    if 'def' not in code_in:
+        return 'missing def'
+    if ':' not in code_in:
+        return 'missing :'
+    if "(" not in code_in or ")" not in code_in:
+        return "missing paren"
+    if "(" + ")" in code_in:
+        return 'missing param'
+    if '    ' not in code_in:
+        return 'missing indent'
+    if 'validate' not in code_in:
+        return 'wrong name'
+    if 'return' not in code_in:
+        return 'missing return'
+    return True""") == True
+

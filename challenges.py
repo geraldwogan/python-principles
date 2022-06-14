@@ -414,7 +414,7 @@ def validate(code_in):
         return "missing paren"
     if "(" + ")" in code_in:
         return 'missing param'
-    if '    ' not in code_in:
+    if '    ' not in code_in and '\n ' not in code_in:
         return 'missing indent'
     if 'validate' not in code_in:
         return 'wrong name'
