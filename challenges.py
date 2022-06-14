@@ -425,19 +425,26 @@ def validate(code_in):
 print(validate('def foo:\n return 123')) # missing paren
 print(validate('def foo():\n print(123)')) # missing param
 print(validate('def foo(x):\n print(123)')) # wrong name
-print(validate("""def validate(code_in):
-    if 'def' not in code_in:
-        return 'missing def'
-    if ':' not in code_in:
-        return 'missing :'
-    if "(" not in code_in or ")" not in code_in:
-        return "missing paren"
-    if "(" + ")" in code_in:
-        return 'missing param'
-    if '    ' not in code_in:
-        return 'missing indent'
-    if 'validate' not in code_in:
-        return 'wrong name'
-    if 'return' not in code_in:
-        return 'missing return'
-    return True""")) # True
+
+########################################################
+#### List xor (5/10) ####
+# https://pythonprinciples.com/challenges/List-xor/
+
+# Define a function named list_xor. Your function should take three parameters: n, list1 and list2.
+
+# Your function must return whether n is exclusively in list1 or list2.
+
+# In other words, if n is in both lists or in none of the lists, return False. If n is in only one of the lists, return True.
+
+# For example:
+
+# list_xor(1, [1, 2, 3], [4, 5, 6]) == True
+# list_xor(1, [0, 2, 3], [1, 5, 6]) == True
+# list_xor(1, [1, 2, 3], [1, 5, 6]) == False
+# list_xor(1, [0, 0, 0], [4, 5, 6]) == False
+
+def list_xor(n, list1, list2):
+    return (n in list1) ^ (n in list2)
+
+print(list_xor(1, [1, 2, 3], [4, 5, 6]))
+print(list_xor(1, [1, 2, 3], [1, 5, 6]))
