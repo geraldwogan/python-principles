@@ -423,3 +423,16 @@ def test_list_xor():
     assert ch.list_xor(1, [0, 2, 3], [1, 5, 6]) == True
     assert ch.list_xor(1, [1, 2, 3], [1, 5, 6]) == False
     assert ch.list_xor(1, [0, 0, 0], [4, 5, 6]) == False
+
+    ########################################################
+#### Counting Parameters (5/10) ####
+# https://pythonprinciples.com/challenges/Counting-parameters/
+
+# Define a function param_count that takes a variable number of parameters. The function should return the number of arguments it was called with.
+
+# For example, param_count() should return 0, while param_count(2, 3, 4) should return 3.
+
+def test_param_count():
+    assert ch.param_count() == 0
+    assert ch.param_count(1, 2, 3)
+    assert ch.param_count([1, 2, 3]) == 1
