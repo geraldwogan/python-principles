@@ -463,7 +463,6 @@ def param_count(*args):
 print(param_count())
 print(param_count(1, 2, 3))
 
-
 ########################################################
 #### Thousands Separator (7/10) ####
 # https://pythonprinciples.com/challenges/Thousands-separator/
@@ -479,5 +478,3 @@ def format_number(int_in):
     # return f'{value:,}' # for python >= 3.6
 
 print(format_number(1000000))
-
-

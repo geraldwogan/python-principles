@@ -436,3 +436,18 @@ def test_param_count():
     assert ch.param_count() == 0
     assert ch.param_count(1, 2, 3)
     assert ch.param_count([1, 2, 3]) == 1
+
+########################################################
+#### Thousands Separator (7/10) ####
+# https://pythonprinciples.com/challenges/Thousands-separator/
+
+# Write a function named format_number that takes a non-negative number as its only parameter.
+
+# Your function should convert the number to a string and add commas as a thousands separator.
+
+# For example, calling format_number(1000000) should return "1,000,000".
+
+def test_format_number():
+    assert ch.format_number(1000000) == '1,000,000'
+    assert ch.format_number(10000) == '10,000'
+    assert ch.format_number(1) == '1'
