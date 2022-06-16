@@ -475,7 +475,8 @@ print(param_count(1, 2, 3))
 # For example, calling format_number(1000000) should return "1,000,000".
 
 def format_number(int_in):
-    return ','.join(str(int_in)[::-1][i:i+3] for i in range(0, len(str(int_in)), 3))[::-1]
+    return "{:,}".format(int_in)
+    # return f'{value:,}' # for python >= 3.6
 
 print(format_number(1000000))
 
