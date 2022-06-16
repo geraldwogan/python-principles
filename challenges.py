@@ -462,3 +462,21 @@ def param_count(*args):
 
 print(param_count())
 print(param_count(1, 2, 3))
+
+
+########################################################
+#### Thousands Separator (7/10) ####
+# https://pythonprinciples.com/challenges/Thousands-separator/
+
+# Write a function named format_number that takes a non-negative number as its only parameter.
+
+# Your function should convert the number to a string and add commas as a thousands separator.
+
+# For example, calling format_number(1000000) should return "1,000,000".
+
+def format_number(int_in):
+    return ','.join(str(int_in)[::-1][i:i+3] for i in range(0, len(str(int_in)), 3))[::-1]
+
+print(format_number(1000000))
+
+
