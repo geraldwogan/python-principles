@@ -26,3 +26,6 @@ jobs:
       - name: Test with pytest
         run: |
           pytest
+      - name: Print Job Status
+        run:  |
+          echo "This job's status is ${{ job.status }}."
